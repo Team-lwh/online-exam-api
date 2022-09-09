@@ -1,5 +1,6 @@
 package com.exam.serviceimpl;
 
+import com.exam.entity.Admin;
 import com.exam.entity.Student;
 import com.exam.entity.Teacher;
 import com.exam.mapper.LoginMapper;
