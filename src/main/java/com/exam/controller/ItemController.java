@@ -8,12 +8,16 @@ import com.exam.serviceimpl.JudgeQuestionServiceImpl;
 import com.exam.serviceimpl.MultiQuestionServiceImpl;
 import com.exam.util.ApiResultHandler;
 import com.exam.vo.Item;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+
+@Api(tags = "题组管理模块")
 
 @RestController
 public class ItemController {
@@ -31,7 +35,7 @@ public class ItemController {
     PaperService paperService;
 
 
-
+    @ApiOperation(value = "试题组卷")
     @PostMapping("/item")
     public ApiResult ItemController(@RequestBody Item item) {
         // 选择题
